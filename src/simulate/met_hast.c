@@ -35,11 +35,12 @@ Date Created: 24/02/16
 #define MACHINE 1
 
 // Number of iterations for Met Hastings
-// 1E10 used in paper
+// 1e10 used in paper
 #define NUM_STEPS 5e6
 
 // Period to thin
-#define THINNING 1e5
+// 1e5 used in paper
+#define THINNING 1e3
 
 // Period to print to file. Should be <= NUM_STEPS/THINNING. 
 // THINNING * BUFFER_LEN = Period to print in iterations. About 10^7 is sensible
@@ -47,11 +48,13 @@ Date Created: 24/02/16
 
 // Period to report the acceptance rate (ignores THINNING). Should be < NUM_STEPS
 // Typically want to report less often than store params
-#define REPORT 1e6
+// 1e6 used in paper
+#define REPORT 1e5
 
 // Period to print acceptance rate to file
 // REPORT * REPORT_BUFFER_LEN = Period to print in iterations. About 10^7 is sensible
-#define REPORT_BUFFER_LEN 100
+// 100 used in paper
+#define REPORT_BUFFER_LEN 10
 
 /*
 // Number of iterations for Met Hastings
