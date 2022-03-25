@@ -11,7 +11,7 @@ pos_dir = '../simulate/'
 trunc = 1
 
 
-########### Set these params to mirror what is in ../simulate/met_hast.c ##################
+# TODO: These have been tweaked for "demo" mode. Please see comment for original values
 thin_orig = 1 # was originally 10
 burnin = 0  # 0.5e7/thin_orig # posterior burnin
 thin_again = 1 # was originally 10  # a second round of thinning for the summary stats
