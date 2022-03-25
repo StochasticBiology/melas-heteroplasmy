@@ -15,7 +15,6 @@ To run the MCMC:
 
 # Plotting
 We have provided a conda environment which was generated at the time of this repo, to aid reproducibility. To install it, run
-Install the conda environment
 ```bash
 conda env create -f environment.yml
 ```
