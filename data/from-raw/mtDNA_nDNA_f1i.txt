@@ -1,0 +1,9 @@
+#DataThief /home/juvid/Dropbox/Work/Mit_and_Metabolism/Wallace_MELAS/Data/mtDNA_nDNA.png Thursday 14-May-2015 1:53:23 PM
+Heteroplasmy,mtDNA_nDNA_FC,Error_mt_n
+0.0, 1.0, 0.0
+20.0, 0.8614, 0.0761
+30.0, 0.8108, 0.0599
+50.0, 1.0127, 0.0986
+60.0, 0.6806, 0.0523
+90.0, 0.9499, 0.1479
+100.0, 0.9774, 0.0911
