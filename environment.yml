@@ -1,0 +1,12 @@
+name: melas-heteroplasmy
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - pandas
+  - ca-certificates
+  - certifi
+  - openssl
+prefix: C:\Users\jarya\miniconda3\envs\melas-heteroplasmy
