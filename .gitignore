@@ -1,0 +1,6 @@
+.idea
+src/simulate/*.dat
+**/.private*
+**/*.ce
+**/*.png
+**/*.pdf
