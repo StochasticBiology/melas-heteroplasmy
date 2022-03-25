@@ -6,14 +6,14 @@ This project was carried out roughly between 2014-16 (back before the first auth
 
 If you get stuck using this project, please [raise a git issue](https://github.com/StochasticBiology/melas-heteroplasmy/issues) and we will do our best to help.
 
-# Run MCMC
+## Run MCMC
 
 To run the MCMC:
 1. `cd src/simulate`
 2. Set the parameters `NUM_STEPS`, `REPORT` and `REPORT_BUFFER_LEN` appropriately. The code is currently set up to complete quickly in a demo mode, but the comments give values used in the paper.
 3. Run `sh run.sh` in any linux environment with gcc set up
 
-# Plotting
+## Plotting
 We have provided a conda environment which was generated at the time of this repo, to aid reproducibility. To install it, run
 ```bash
 conda env create -f environment.yml
@@ -27,5 +27,5 @@ mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 ```
 from plotting scripts wherever you see them.
 
-# Limitations
+## Limitations
 Please check `TODO`s wherever you see them in the code for major limitations.
