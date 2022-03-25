@@ -32,7 +32,11 @@ l = l[0]
 l = l.split(',')
 l[0] = l[0].replace('map: ', '')
 l[-1] = l[-1].replace('\n', '')
-# map_params = [eval(x) for x in l]  # TODO: This is the original code, but it's broken. Will hard-code the actual MAP
+
+# TODO: This is the original code, but it's broken. Will hard-code the actual MAP.
+#       Need to fix met_hast.c to generate MAP parameters. Could be because of the "demo" mode. Perhaps
+#       running with the original parameters fixes this.
+# map_params = [eval(x) for x in l]
 map_params = [0.517104,0.500965,0.004852,4.036712,-0.741138,-0.722366,-0.964056,0.128937,0.920223,3.192715,0.673631,0.070328,0.200925,0.203106,0.291619,0.063939,0.002678,0.171003]
 
 print('Loading posterior_samples...')

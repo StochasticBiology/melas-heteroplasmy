@@ -25,3 +25,6 @@ plt.rc('text', usetex=True)
 mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 ```
 from plotting scripts wherever you see them.
+
+# Limitations
+Please check `TODO`s wherever you see them in the code for major limitations.
