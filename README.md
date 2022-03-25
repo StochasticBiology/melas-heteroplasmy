@@ -14,12 +14,14 @@ To run the MCMC:
 3. Run `sh run.sh` in any linux environment with gcc set up
 
 # Plotting
-
+We have provided a conda environment which was generated at the time of this repo, to aid reproducibility. To install it, run
 Install the conda environment
 ```bash
 conda env create -f environment.yml
 ```
-then run the code under `src/plot`. You may need to have LaTeX installed to make the plots, but if you can live without then just remove the lines
+from your base conda environment. Note that this conda environment was created on a Windows machine.
+
+Run the code under `src/plot`. You may need to have LaTeX installed to make the plots, but if you can live without then just remove the lines
 ```python 
 plt.rc('text', usetex=True)
 mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
