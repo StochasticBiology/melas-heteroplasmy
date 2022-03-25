@@ -35,7 +35,8 @@ Date Created: 24/02/16
 #define MACHINE 1
 
 // Number of iterations for Met Hastings
-#define NUM_STEPS 1e10
+// 1E10 used in paper
+#define NUM_STEPS 5e6
 
 // Period to thin
 #define THINNING 1e5
@@ -199,7 +200,7 @@ int main( int argc, char *argv[]){
 		snprintf(data_dir, sizeof(data_dir), "/scratchcomp16/ja1109/Wallace_Data/Wallace_Data_Final/Processed_times_vol/");
 	}
 	else if (MACHINE == 1) { // work
-		snprintf(data_dir, sizeof(data_dir),"../../data/reprocessed");
+		snprintf(data_dir, sizeof(data_dir),"../../data/reprocessed/");
 	}
 	else if (MACHINE == 2) { // home
 		snprintf(data_dir, sizeof(data_dir), "/media/hdd/home/juvid/Dropbox/Work/Mit_and_Metabolism/Wallace_MELAS/Data/Wallace_Data_Final/Processed_times_vol/");
@@ -211,7 +212,7 @@ int main( int argc, char *argv[]){
 	
 	
 
-	char chol_dir[] = "../../data/cholesky";
+	char chol_dir[] = "../../data/cholesky/";
 	FILE *ch_p;
 	char chol_pth[500];
 	snprintf(chol_pth, sizeof(chol_pth), "%schol_flat.dat", chol_dir); 
