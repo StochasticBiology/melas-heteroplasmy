@@ -2,7 +2,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
+import sys
 
 data_dir = '../../data/from-raw/'
 
@@ -10,11 +10,17 @@ pos_dir = '../simulate/'
 
 trunc = 1
 
+demo = int(sys.argv[1])
 
-# TODO: These have been tweaked for "demo" mode. Please see comment for original values
-thin_orig = 1 # was originally 10
-burnin = 0  # 0.5e7/thin_orig # posterior burnin
-thin_again = 1 # was originally 10  # a second round of thinning for the summary stats
+if demo == 1:
+  # TODO: These have been tweaked for "demo" mode. Please see comment for original values
+  thin_orig = 1 # was originally 10
+  burnin = 0  # 0.5e7/thin_orig # posterior burnin
+  thin_again = 1 # was originally 10  # a second round of thinning for the summary stats
+else:
+  thin_orig = 10
+  burnin = 0.5e7/thin_orig
+  thin_again = 10
 
 '''
 f = open(pos_dir+'map.dat')
