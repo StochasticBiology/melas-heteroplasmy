@@ -34,7 +34,7 @@ Date Created: 24/02/16
 // Number of iterations for Met Hastings
 // 1e10 used in paper
 //#define NUM_STEPS 5e6
-int NUM_STEPS = 5e6;
+long int NUM_STEPS = 5e6;
 
 // Period to thin
 // 1e5 used in paper
@@ -150,7 +150,7 @@ double reg_scale;
 int main( int argc, char *argv[]){
 	// Check command line arguments
 	int my_seed;
-
+	int demo;
 
 	if(argc != 4){
 		printf("Need arguments: demo (0/1), regulariser scale, random seed.\n");
