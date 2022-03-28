@@ -2,7 +2,7 @@
 
 This repository contains code supporting the paper ["Mitochondrial DNA density homeostasis accounts for a threshold effect in a cybrid model of a human mitochondrial disease."](https://doi.org/10.1042/BCJ20170651)
 
-This repo is a work in progress as we curate the old code for public release. If you get stuck using this project, please [raise a git issue](https://github.com/StochasticBiology/melas-heteroplasmy/issues) and we will do our best to help.
+This repo is a work in progress as we curate the old code for public release. We are still verifying the full, paper-scale simulation run. If you get stuck using this project, please [raise a git issue](https://github.com/StochasticBiology/melas-heteroplasmy/issues) and we will do our best to help.
 
 The code in `src` runs parameter inference using MCMC to estimate values and uncertainties for the parameters of a simple model relating several biological quantities related to a disease-causing mtDNA mutation. The MCMC inference is performed using custom C code, and the results are plotted using Python. The required data is included in `data`. The model itself is contained in the function `Eval_model` in `src/simulate/met_functions.h`.
 
