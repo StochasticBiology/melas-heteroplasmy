@@ -31,30 +31,40 @@ Date Created: 24/02/16
 // Enter debugging mode
 //#define VERBOSE
 
-// What machine is this? 0 = cluster, 1 = work, 2 = home
-#define MACHINE 1
-
 // Number of iterations for Met Hastings
 // 1e10 used in paper
-#define NUM_STEPS 5e6
+//#define NUM_STEPS 5e6
+int NUM_STEPS = 5e6;
 
 // Period to thin
 // 1e5 used in paper
-#define THINNING 1e3
+//#define THINNING 1e3
+int THINNING = 1e3;
 
 // Period to print to file. Should be <= NUM_STEPS/THINNING. 
 // THINNING * BUFFER_LEN = Period to print in iterations. About 10^7 is sensible
-#define BUFFER_LEN 1e1
+//#define BUFFER_LEN 1e1
+int BUFFER_LEN = 1e1;
 
 // Period to report the acceptance rate (ignores THINNING). Should be < NUM_STEPS
 // Typically want to report less often than store params
 // 1e6 used in paper
-#define REPORT 1e5
+//#define REPORT 1e5
+int REPORT = 1e5;
 
 // Period to print acceptance rate to file
 // REPORT * REPORT_BUFFER_LEN = Period to print in iterations. About 10^7 is sensible
 // 100 used in paper
-#define REPORT_BUFFER_LEN 10
+//#define REPORT_BUFFER_LEN 10
+int REPORT_BUFFER_LEN = 10;
+
+void setPaperGlobals(void)
+{
+  NUM_STEPS = 1e10;
+  BUFFER_LEN = ;
+  REPORT = 1e6;
+  REPORT_BUFFER_LEN = 100;
+}
 
 /*
 // Number of iterations for Met Hastings
@@ -141,14 +151,18 @@ int main( int argc, char *argv[]){
 	int my_seed;
 
 
-	if(argc != 3){
-		printf("Requires (R, seed)\n");
+	if(argc != 4){
+		printf("Need arguments: demo (0/1), regulariser scale, random seed.\n");
 		return 0;
 	}
 	else{
-		reg_scale = atof(argv[1]);		
+	  demo = atoi(argv[1]);
+	  if(!demo) {
+	    setPaperGlobals();
+	  }
+		reg_scale = atof(argv[2]);		
 		printf("Regulariser scale = %f\n", reg_scale);
-		my_seed = atoi(argv[2]);		
+		my_seed = atoi(argv[3]);		
 		printf("Seed = %d\n", my_seed);
 		
 	}
@@ -199,18 +213,7 @@ int main( int argc, char *argv[]){
 
 	char data_dir[500];
 	// Directory to data
-	if(MACHINE == 0) { // cluster
-		snprintf(data_dir, sizeof(data_dir), "/scratchcomp16/ja1109/Wallace_Data/Wallace_Data_Final/Processed_times_vol/");
-	}
-	else if (MACHINE == 1) { // work
 		snprintf(data_dir, sizeof(data_dir),"../../data/reprocessed/");
-	}
-	else if (MACHINE == 2) { // home
-		snprintf(data_dir, sizeof(data_dir), "/media/hdd/home/juvid/Dropbox/Work/Mit_and_Metabolism/Wallace_MELAS/Data/Wallace_Data_Final/Processed_times_vol/");
-	}
-	else {
-		printf("Machine not known!\n"); return 0;
-	}
 	
 	
 	
