@@ -6,8 +6,8 @@ from itertools import cycle
 import matplotlib.lines as mlines
 
 plt.close('all')
-plt.rc('text', usetex=True)
-mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+#plt.rc('text', usetex=True)
+#mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 
 def acf(theta, lags):
 	N = len(theta) # number of observations 

@@ -40,9 +40,9 @@ all_params = mean_names + sigma_names
 
 plt.close('all')
 size = 10
-plt.rc('text', usetex=True)
+#plt.rc('text', usetex=True)
 plt.rc('font',**{'size':size,'family':'sans-serif','sans-serif':['Helvetica']})
-mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+#mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 
 plt.locator_params(nbins=5)
 

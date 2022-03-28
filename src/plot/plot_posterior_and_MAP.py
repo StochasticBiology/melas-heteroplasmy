@@ -334,8 +334,8 @@ leg_size = 5
 plt.close('all')
 size = 12
 plt.rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})
-plt.rc('text', usetex=True)
-mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+#plt.rc('text', usetex=True)
+#mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 
 fig = plt.figure()
 
@@ -481,8 +481,8 @@ plt.savefig('picard_data.pdf')
 plt.close('all')
 size = 12
 plt.rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})
-plt.rc('text', usetex=True)
-mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+#plt.rc('text', usetex=True)
+#mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 
 fig = plt.figure()
 
@@ -576,8 +576,8 @@ plt.close('all')
 size = 20
 leg_size = 12
 plt.rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})
-plt.rc('text', usetex=True)
-mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+#plt.rc('text', usetex=True)
+#mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 
 fig = plt.figure()
 
@@ -604,8 +604,8 @@ plt.close('all')
 size = 20
 leg_size = 12
 plt.rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})
-plt.rc('text', usetex=True)
-mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+#plt.rc('text', usetex=True)
+#mpl.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
 
 fig = plt.figure()
 # plt.errorbar(mtDNA['Heteroplasmy'], n_good_den, yerr=n_good_den_err, fmt='kx', markersize=12, label='Data')  # TODO: Undefined param, needs detective work JA20220325
