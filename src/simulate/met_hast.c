@@ -61,7 +61,8 @@ int REPORT_BUFFER_LEN = 10;
 void setPaperGlobals(void)
 {
   NUM_STEPS = 1e10;
-  BUFFER_LEN = ;
+  THINNING = 1e5;
+  BUFFER_LEN = 1e2;
   REPORT = 1e6;
   REPORT_BUFFER_LEN = 100;
 }
