@@ -9,7 +9,7 @@ The code in `src` runs parameter inference using MCMC to estimate values and unc
 Requirements: C, Python with `numpy`, `pandas`, `matplotlib`.
 
 ## Wrapper script
-The script `run.sh --demo` executes a fast demo run of the pipeline. `run.sh --full` performs the full analysis for the paper, using more computer time.
+The script `run.sh --demo` executes a fast demo run of the pipeline. `run.sh --full` performs the full analysis for the paper, using more computer time. Raw output goes to `src/simulate`; plots in PDF and PNG format go to `src/plot`.
 
 ## Run MCMC
 MCMC and model simulation is done with `met_hast.c` in `src/simulate`. This takes command-line arguments: `met_hast.ce [demo] [regulariser scale] [random seed]`. `[demo]` is 1 for the fast demo version and 0 for the full simulation; `[regulariser scale]` is 0.1 by default; `[random seed]` is 42 by default.
