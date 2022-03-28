@@ -39,11 +39,7 @@ l = l.split(',')
 l[0] = l[0].replace('map: ', '')
 l[-1] = l[-1].replace('\n', '')
 
-# TODO: This is the original code, but it's broken. Will hard-code the actual MAP.
-#       Need to fix met_hast.c to generate MAP parameters. Could be because of the "demo" mode. Perhaps
-#       running with the original parameters fixes this.
-# map_params = [eval(x) for x in l]
-map_params = [0.517104,0.500965,0.004852,4.036712,-0.741138,-0.722366,-0.964056,0.128937,0.920223,3.192715,0.673631,0.070328,0.200925,0.203106,0.291619,0.063939,0.002678,0.171003]
+map_params = [eval(x) for x in l]
 
 print('Loading posterior_samples...')
 posterior_samples = np.loadtxt(pos_dir + 'posterior_samples.dat', delimiter=',')
@@ -136,8 +132,7 @@ def eval_model_mean(_parameters, **kwargs):
 # Import data
 ################################################
 
-print
-'Importing other data...'
+print('Importing other data...')
 
 # gly_data = pd.read_csv('/home/juvid/Dropbox/Work/Mit_and_Metabolism/Wallace_MELAS/Data/EDA/Transcripts/Rel_GLY.csv')
 
