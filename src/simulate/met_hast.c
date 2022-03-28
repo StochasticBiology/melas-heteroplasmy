@@ -463,7 +463,7 @@ int main( int argc, char *argv[]){
 	{
 		fscanf(ch_p, "%lf\n", &chol[i]);
 	}
-	close(ch_p);
+	fclose(ch_p);
 
 
 	#ifdef VERBOSE
@@ -593,8 +593,8 @@ int main( int argc, char *argv[]){
 			map_fp = fopen("map.dat","w");
 			fprintf(map_fp, "map: ");
 			for(i=0; i<num_params; i++){
-				if(i == num_params - 1) fprintf(samples_fp, "%f\n", map[i]);			
-				else fprintf(samples_fp, "%f,", map[i]);		
+				if(i == num_params - 1) fprintf(map_fp, "%f\n", map[i]);			
+				else fprintf(map_fp, "%f,", map[i]);		
 			}
 			fprintf(map_fp, "lp_map: %f\n", lp_map);
 			fprintf(map_fp, "ll_map: %f\n", ll_map);
