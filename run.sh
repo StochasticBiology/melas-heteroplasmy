@@ -1,9 +1,9 @@
-commandstr = $1
+commandstr=$1
 
 if [ $# -eq 0 ]
 then
     echo "Running demo by default: use --full for full analysis."
-    commandstr = "--demo"
+    commandstr="--demo"
 fi
 
 if [[ $commandstr == *--demo* ]]; then
