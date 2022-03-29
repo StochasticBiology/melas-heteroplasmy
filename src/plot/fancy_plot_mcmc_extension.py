@@ -1,4 +1,4 @@
-
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -19,8 +19,13 @@ def acf(theta, lags):
 		acf[i] = np.sum(theta_t * theta_lag)/(len(theta_t) * np.var(theta, ddof = 1))
 	return acf
 
+demo = int(sys.argv[1])
+
 thin_orig = 1
-burnin = 0 #int(0.5e7/thin_orig)
+if demo == 1:
+  burnin = 0 
+else:
+  burnin = int(0.5e7/thin_orig)
 
 report = 1000
 
